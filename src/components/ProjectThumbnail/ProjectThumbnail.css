@@ -1,0 +1,7 @@
+.projectThumbCont {
+    width: 360px;
+    height: 360px;
+    background: #ccc;
+    background-color: #1fc8db;
+    background-image: linear-gradient(135deg,#29a0cc 0%, #2cb5e8 50%);    
+}

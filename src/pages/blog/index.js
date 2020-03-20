@@ -2,9 +2,18 @@ import React from 'react'
 
 import Layout from '../../components/Layout'
 import BlogRoll from '../../components/BlogRoll'
+import ProjectThumbnail from '../../components/ProjectThumbnail/ProjectThumbnail'
+
+
+const allProjectsContainerStyle = {
+  'display': 'flex',
+  'flex-flow': 'row wrap'
+};
 
 export default class BlogIndexPage extends React.Component {
   render() {
+    // FAKE PROJECT ID NUMBERS FOR NOW...
+    let projects = ["s6y7l68f", "o47ck86e", "uvn1rybu", "5b4a07sg", "3crgkknc", "l3tet2pg", "h8kke0mn"];//, "168s5pn6", "0edthmw4"];
     return (
       <Layout>
         <div
@@ -22,9 +31,18 @@ export default class BlogIndexPage extends React.Component {
               padding: '1rem',
             }}
           >
-            Latest Stories
+            Hi Jayne
           </h1>
         </div>
+
+        <section className="section">
+          {/* <div className="container"> */}
+            <div className="all-projects-container" style={allProjectsContainerStyle}>
+              {projects.map(projectID => <ProjectThumbnail itemID={ projectID }/>)}
+            </div>
+          {/* </div> */}
+        </section>
+
         <section className="section">
           <div className="container">
             <div className="content">
